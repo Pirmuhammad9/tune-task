@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEDEF"
+    tools:context=".presentation.screen.CardsScreen">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kartalar"
+        android:textColor="#3F3F41"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        app:layout_constraintLeft_toRightOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="@id/backButton" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/recycleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_reuse"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/optionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_option"
+        app:layout_constraintRight_toLeftOf="@id/recycleButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintRight_toLeftOf="@id/optionButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        android:id="@+id/tabLayout"
+        android:layout_marginTop="24dp"
+        android:background="#ECEDEF"
+        app:tabTextColor="#3F3F41"
+        app:tabMode="scrollable"
+        android:layout_marginHorizontal="8dp"
+        app:tabSelectedTextColor="#3F3F41"
+        app:tabIndicatorColor="#8661CC"
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="16dp"
+        tools:listitem="@layout/item_card"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:background="@drawable/rv_shape"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/message"
+        android:text="@string/no_cards_to_show"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/recyclerView"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        android:theme="@style/progress"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge"
+        app:layout_constraintTop_toTopOf="@id/recyclerView"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

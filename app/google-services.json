@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "548281482432",
+    "project_id": "tune-task",
+    "storage_bucket": "tune-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548281482432:android:696c9a2d16e40a5b56c125",
+        "android_client_info": {
+          "package_name": "uz.tune.task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548281482432-j61a42hg1ufhgbb577rp03radmga3osq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uz.tune.task",
+            "certificate_hash": "6a6030c160d7a5a9eec5067f111b51789babed1c"
+          }
+        },
+        {
+          "client_id": "548281482432-2k8n9s1f8ijchg6mva27kvc1iql9ljrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO3_rOMx1tyZJ4y8RHxQYo8TXwUtvtt2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548281482432-2k8n9s1f8ijchg6mva27kvc1iql9ljrc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

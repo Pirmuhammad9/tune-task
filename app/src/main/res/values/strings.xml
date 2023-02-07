@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Task</string>
+    <string name="kartalar">Kartalar</string>
+    <string name="_0_00_uzs">0.00 UZS</string>
+    <string name="_8600_02_9558">8600 02** **** 9558</string>
+    <string name="xusanov_pirmuhammad">XUSANOV PIRMUHAMMAD</string>
+    <string name="rf_kartalar">RF kartalar</string>
+    <string name="karta_qo_shish">Karta qo\'shish</string>
+    <string name="karta_ma_lumotlarini_kiriting">Karta ma\'lumotlarini kiriting</string>
+    <string name="karta_raqami">Karta raqami</string>
+    <string name="_0000_0000_0000_0000">0000 0000 0000 0000</string>
+    <string name="amal_qilish_sanasi">Amal qilish sanasi</string>
+    <string name="oo_yy">OO/YY</string>
+    <string name="davom_etish">Davom etish</string>
+    <string name="no_cards_to_show">No cards to show</string>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEDEF"
+    tools:context=".presentation.screen.AddCardScreen">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/rf_kartalar"
+        android:textColor="#692FDD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/scanerIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:elevation="16dp"
+        android:src="@drawable/ic_scanner"
+        app:layout_constraintBottom_toBottomOf="@id/cardNumber"
+        app:layout_constraintEnd_toEndOf="@id/cardNumber"
+        app:layout_constraintTop_toTopOf="@id/cardNumber" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintRight_toLeftOf="@id/txt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#692FDD" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/addCardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/karta_qo_shish"
+        android:textColor="#3A3838"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/insertDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/karta_ma_lumotlarini_kiriting"
+        android:textColor="#3A3838"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/addCardText"
+        app:layout_constraintTop_toBottomOf="@id/addCardText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        app:layout_constraintTop_toBottomOf="@id/insertDataText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/addCartTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:elevation="16dp"
+        android:text="@string/karta_raqami"
+        android:textColor="#3A3838"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insertDataText" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/cardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_editext"
+        android:elevation="2dp"
+        android:hint="@string/_0000_0000_0000_0000"
+        android:inputType="number"
+        android:padding="12dp"
+        app:mask="#### #### #### ####"
+        android:textColorHint="@color/borderColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/addCartTxt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="16dp"
+        android:text="@string/amal_qilish_sanasi"
+        android:textColor="#3A3838"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/cardNumber" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/dateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_editext"
+        android:elevation="2dp"
+        android:hint="@string/oo_yy"
+        app:mask="##/##"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColorHint="@color/borderColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dateText"
+        app:layout_constraintTop_toBottomOf="@id/dateText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="@color/buttonEnableColor"
+        android:enabled="false"
+        android:padding="16dp"
+        android:elevation="8dp"
+        android:text="@string/davom_etish"
+        android:textAllCaps="false"
+        android:textColor="#B090E9"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/errorText"
+        app:layout_constraintTop_toTopOf="@id/dateInput"
+        app:layout_constraintBottom_toBottomOf="@id/dateInput"
+        app:layout_constraintStart_toEndOf="@id/dateInput"
+        android:layout_marginStart="16dp"
+        android:visibility="invisible"
+        android:text="No'to'g'ri sana"
+        android:elevation="2dp"
+        android:textColor="#DF1010"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateInput" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
