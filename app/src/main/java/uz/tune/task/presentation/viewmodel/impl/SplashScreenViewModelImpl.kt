@@ -15,7 +15,7 @@ class SplashScreenViewModelImpl @Inject constructor(): SplashScreenViewModel, Vi
     override val openNextScreenLiveData = MutableLiveData<Unit>()
     override fun openNextScreen() {
         viewModelScope.launch {
-            delay(2500)
+            delay(1500)
             openNextScreenLiveData.postValue(Unit)
         }
     }
